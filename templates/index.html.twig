@@ -1,0 +1,22 @@
+{# templates/content/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contenus</h1>
+
+    {# Affichage paginé des contenus #}
+
+
+    {# Boucle sur les contenus pour les afficher #}
+    <ul>
+        {% for content in contents %}
+            <li>
+                <a href="{{ path('article_show', {'id': content.id}) }}">{{ content.text }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    {# Affichage paginé des contenus #}
+
+{% endblock %}

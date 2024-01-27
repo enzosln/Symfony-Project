@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h1>{{ content.title }}</h1>
+
+    <p>{{ content.text }}</p>
+
+    <a href="{{ path('article_toggle_accept', {'id': content.id}) }}"><button>Accepter</button></a>
+    <a href="{{ path('article_delete', {'id': content.id}) }}"><button>Supprimer</button></a>
+
+
+{% endblock body %}

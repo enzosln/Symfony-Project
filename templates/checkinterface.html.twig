@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contenus à checker</h1>
+
+    <ul>
+        {% for content in contents %}
+            <li>
+                <a href="{{ path('article_check_one', {'id': content.id}) }}">{{ content.text }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
